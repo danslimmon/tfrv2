@@ -1,5 +1,5 @@
 data "external" "slow-data-source-external" {
-  program = ["curl",  "https://http://nothing-to-see-here-but-really-this-is-for-mock-games-delete.s3-website-us-west-2.amazonaws.com/"]
+  program = ["curl",  "http://nothing-to-see-here-but-really-this-is-for-mock-games-delete.s3-website-us-west-2.amazonaws.com/"]
 }
 resource "random_id" "random" {
   keepers = {
