@@ -8,6 +8,9 @@ resource "null_resource" "foobar" {
       for i in $(seq 1 300); do curl http://nothing-to-see-here-but-really-this-is-for-mock-games-delete.s3-website-us-west-2.amazonaws.com/; sleep 1; done
     EOT
   }
+  triggers = {
+    random_number = "${random_id.random.hex}"
+  }
 }
 
 resource "random_id" "random" {
